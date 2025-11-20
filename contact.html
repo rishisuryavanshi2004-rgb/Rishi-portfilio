@@ -21,15 +21,27 @@
 
   <section class="contact">
     <h2>Contact Me</h2>
+
     <div class="contact-info">
       <p><strong>Phone:</strong> +91 805789250</p>
       <p><strong>Email:</strong> <a href="mailto:Singhrishi0518@gmail.com">Singhrishi0518@gmail.com</a></p>
       <p><strong>Location:</strong> Lucknow, India</p>
     </div>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" rows="5" required></textarea>
+
+    <!-- ⭐ FORM THAT SENDS MESSAGE TO YOUR EMAIL ⭐ -->
+    <form action="https://formsubmit.co/Singhrishi0518@gmail.com" method="POST">
+      
+      <!-- Disable Captcha -->
+      <input type="hidden" name="_captcha" value="false">
+
+      <!-- After Submit Redirect Page -->
+      <input type="hidden" name="_next" value="https://yourwebsite.com/thanks.html">
+
+      <!-- Form Fields -->
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
       <button type="submit">Send Message</button>
     </form>
   </section>
